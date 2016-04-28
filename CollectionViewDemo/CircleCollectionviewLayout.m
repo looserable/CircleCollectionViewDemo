@@ -63,7 +63,7 @@
 /*
  The UICollectionViewUpdateItem class describes a single change to make to an item in a collection view. You do not create instances of this class directly. When updating its content, the collection view object creates them and passes them to the layout object’s prepareForCollectionViewUpdates: method, which can use them to prepare the layout object for the upcoming changes.
  */
-//UICollectionViewUpdateItem 这个类用来描述一个对于collectionview中的item的一个简单的改变，你不用去创建这个累的实例。当你更新collectionview的内容的时候，视图的对象就会创建它们并且把它们传给layout的实例的prepareForCollectionViewUpdates 方法中，这个方法可以为这个即将到来的变化做出一些改变
+//UICollectionViewUpdateItem 这个类用来描述一个对于collectionview中的item的一个简单的改变，你不用去创建这个类的实例。当你更新collectionview的内容的时候，视图的对象就会创建它们并且把它们传给layout的实例的prepareForCollectionViewUpdates 方法中，这个方法可以为这个即将到来的变化做出一些改变
 
 -(void)prepareForCollectionViewUpdates:(NSArray<UICollectionViewUpdateItem *> *)updateItems{
     
@@ -80,7 +80,8 @@
         }
     }
 }
-//
+
+//这个方法和下面的方法是为了动画产生的，这个方法对cell属性的位置设置是对它初始位置的设置。而下面的final是对动画结束的cell的位置的设置。
 -(UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath{
     
     UICollectionViewLayoutAttributes *attribute = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
